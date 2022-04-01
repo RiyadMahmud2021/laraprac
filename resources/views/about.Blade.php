@@ -1,0 +1,1 @@
+<h1>Its routing with view: about</h1>
