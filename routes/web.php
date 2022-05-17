@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CrudControllerRaw;
+use App\Http\Controllers\FileUploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +34,11 @@ Route::get('/about', function () { // by me // Route:request_method('/route_name
 Route::get('/contact', function () { // by me // Route:request_method('/route_name', function_for_view (){}
     return view('contact');
 });
+// ---------------------
+Route::get('/view',[CrudControllerRaw::class, 'view']);
+Route::post('/add_data',[CrudControllerRaw::class, 'insert']);
+
+// ---------------------
+Route::get('/fileUploadPage',[FileUploadController::class, 'fileUploadPage']);
+
 
